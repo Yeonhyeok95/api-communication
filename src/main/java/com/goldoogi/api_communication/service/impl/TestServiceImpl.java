@@ -3,6 +3,7 @@ package com.goldoogi.api_communication.service.impl;
 import org.json.JSONObject;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.RequestEntity.BodyBuilder;
 import org.springframework.scheduling.annotation.Async;
@@ -52,8 +53,9 @@ public class TestServiceImpl implements TestService {
 
     private HttpClient httpClient;
     private CookieManager cookieManager;
-    public static String API_KEY = "CAP-5760563DD29A6FCEE5DBA211120C3307";
     public static String SITE_KEY = "6Lc-Fr0UAAAAAOdqLYqPy53MxlRMIXpNXFvBliwI";
+    @Value("${API_KEY}")
+    private static String API_KEY;
 
     // constructor for initial setup of httpClient
     public TestServiceImpl() {
