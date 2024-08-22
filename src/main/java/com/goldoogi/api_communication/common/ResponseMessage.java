@@ -23,4 +23,5 @@ public interface ResponseMessage {
 
     // HTTP Status 500
     String DATABASE_ERROR = "Database error.";
+    String SERVER_UNAVAILABLE = "Server unavailable";
 }

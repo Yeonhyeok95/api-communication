@@ -25,4 +25,9 @@ public class DCPostResponseDto extends ResponseDto {
         ResponseDto result = new ResponseDto(ResponseCode.NOT_EXISTED_USER, ResponseMessage.NOT_EXISTED_USER);
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(result);
     }
+
+    public static ResponseEntity<ResponseDto> notServerWorking() {
+        ResponseDto result = new ResponseDto(ResponseCode.SERVER_UNAVAILABLE, ResponseMessage.SERVER_UNAVAILABLE);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(result);
+    }
 }

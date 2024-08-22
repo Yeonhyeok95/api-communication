@@ -21,13 +21,23 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class DCPostController {
     
-    private final DCPostService dcPostService;
+    // private final DCPostService dcPostService;
 
+    // @PostMapping("")
+    // public ResponseEntity<? super DCPostResponseDto> postBoard(
+    //     @RequestBody @Valid DCPostRequestDto requestBody
+    // ) {
+    //     ResponseEntity<? super DCPostResponseDto> response = dcPostService.postBoard(requestBody);
+    //     return response;
+    // }    
+
+    private final TestService testService;
+    
     @PostMapping("")
     public ResponseEntity<? super DCPostResponseDto> postBoard(
         @RequestBody @Valid DCPostRequestDto requestBody
     ) {
-        ResponseEntity<? super DCPostResponseDto> response = dcPostService.postBoard(requestBody);
+        ResponseEntity<? super DCPostResponseDto> response = testService.postBoard(requestBody);
         return response;
     }    
 }

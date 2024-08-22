@@ -23,4 +23,5 @@ public interface ResponseCode {
 
     // HTTP Status 500
     String DATABASE_ERROR = "DBE";
+    String SERVER_UNAVAILABLE = "NS";
 }
